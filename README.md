@@ -57,8 +57,8 @@ The project is in early development
 
 ### To do
 
--E2e encryption
--CRUD
--User key signed posts
--Backup
--Post number limit
+- E2e encryption
+- CRUD
+- User key signed posts
+- Backup
+- Post number limit
