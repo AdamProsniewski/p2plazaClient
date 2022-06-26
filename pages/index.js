@@ -1,6 +1,5 @@
-import Navbar from '../components/Navbar'
-import Messages from '../components/Messages'
-import Grid from '../components/Grid'
+import Navbar from '../components/Navbar/Navbar'
+import Grid from '../components/Grid/Grid'
 
 export default function Home() {
   return (

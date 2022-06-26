@@ -3,10 +3,10 @@ import * as React from 'react';
 import { styled } from '@mui/material/styles';
 import Box from '@mui/material/Box';
 import Paper from '@mui/material/Paper';
-import Messages from './Messages';
+import Messages from '../messages/Messages';
 import { Grid } from '@mui/material';
-import AlignItemsList from './leftGrid';
-import BasicList from './rightGrid';
+import AlignItemsList from '../leftGrid/leftGrid';
+import BasicList from '../rightGrid/rightGrid';
 //import './Grid.css'
 
 

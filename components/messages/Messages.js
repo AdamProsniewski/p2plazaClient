@@ -2,8 +2,8 @@ import { useEffect, useState} from 'react'
 import Gun from 'gun/gun'
 import 'gun/sea'
 import Ajv from "ajv"
-import Message from './Message'
-import Create from './Create'
+import Message from '../message/Message'
+import Create from '../create/Create'
 import Router from 'next/router';
 const ajv = new Ajv()
 ajv.addKeyword('isNotEmpty', {
