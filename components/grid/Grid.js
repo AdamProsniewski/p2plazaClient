@@ -7,17 +7,11 @@ import Messages from '../messages/Messages';
 import { Grid } from '@mui/material';
 import AlignItemsList from '../leftGrid/leftGrid';
 import BasicList from '../rightGrid/rightGrid';
-import useWindowSize from "../utils/useWindowSize";
 //import './Grid.css'
 
 
 export default function Grid2(props){
-  
-  const { width } = useWindowSize();
-
     return(
-      <div>
-      {width > 700 && (
         <>
 <Grid container spacing={3}>
 
@@ -40,16 +34,4 @@ export default function Grid2(props){
 </Grid>
 
 </Grid>
-</>
-
-)}
-{width <= 700 && (
-
-<Grid item xs={6}>
-  <Messages/>
-</Grid>
-
-)}
-
-</div>
-)}
+</>)}
