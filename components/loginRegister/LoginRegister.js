@@ -1,4 +1,4 @@
-//import {useState} from 'react'
+import {useState} from 'react'
 import Form from "../form/Form"
 import Gun from 'gun/gun'
 import 'gun/sea'
@@ -14,6 +14,7 @@ var gun = Gun({
 });
 var user = gun.user().recall({ sessionStorage: true });
 export default function LoginRegister() {
+  const [isOpened, setIsOpened] = useState(false);
   const login = (data) => {
     //console.log(data);
     user.auth(data.email, data.password, function (ack) {
@@ -46,16 +47,27 @@ export default function LoginRegister() {
     console.log(`signed in as ${alias}`);
   });
 
+    function toggle() {
+      setIsOpened(wasOpened => !wasOpened);
+    }
+
   return (
-    <div style={{ display: 'flex' }}>
+    <div>
       <Form
         func={login}
         type={'login'}
       />
+
+      <div class="min-h-full flex items-center justify-center px-4 sm:px-6 lg:px-8">
+      <h6 onClick={toggle}>Don't have an account? Register here</h6>
+      </div>
+
+      {isOpened && (
       <Form
         func={register}
         type={'register'}
       />
+      )}
     </div>
   )
 }
