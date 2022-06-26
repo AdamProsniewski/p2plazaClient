@@ -1,5 +1,5 @@
-import Navbar from "../components/Navbar"
-import Tiles from "../components/Tiles"
+import Navbar from "../components/navbar/Navbar"
+import Tiles from "../components/tile/Tile"
 
 export default function Shop(){
     return(

@@ -1,5 +1,5 @@
-import Navbar from "../components/Navbar"
-import LoginRegister from "../components/LoginRegister"
+import Navbar from "../components/navbar/Navbar"
+import LoginRegister from "../components/loginRegister/LoginRegister"
 
 export default function Auth(){
     return(

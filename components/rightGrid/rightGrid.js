@@ -41,7 +41,7 @@ export default function BasicList() {
             </ListItemButton>
           </ListItem>
           <ListItem disablePadding>
-            <ListItemButton component="a" href="#simple-list">
+            <ListItemButton component="a" href="http://localhost:3000/Shop">
               <ListItemText primary="Sklep" />
             </ListItemButton>
           </ListItem>
