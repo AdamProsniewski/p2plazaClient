@@ -177,6 +177,7 @@ export default function PrimarySearchAppBar() {
   );
 
   return (
+    <div data-testid="navbar">
     <React.Fragment>
     <CssBaseline />
     <Box sx={{ flexGrow: 1 }}>
@@ -256,5 +257,6 @@ export default function PrimarySearchAppBar() {
       {renderMenu}
     </Box>
       </React.Fragment>
+      </div>
   );
 }
