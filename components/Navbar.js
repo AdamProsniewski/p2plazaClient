@@ -190,7 +190,10 @@ export default function PrimarySearchAppBar() {
             noWrap
             sx={{ display: { xs: 'none', sm: 'block',color:"white",textDecoration: "none"  } }}
           >
-            Hobbyfi
+          <Link href="/">
+            <a>Hobbyfi</a>
+          </Link>
+            
           </Typography>
           <Search>
             <SearchIconWrapper>
