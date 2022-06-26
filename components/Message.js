@@ -27,13 +27,13 @@ export default function Message(props){
 
               <div className="mt-2">
               </div>
-              <small classNameName="text-blue-400 text-xs">{props.name}</small>
+              <small className="text-blue-400 text-xs">{props.name}</small>
               <div>
 
                 <div className="p-1">
                   <p className="text-gray-900 border-l-2 px-1 border-blue-500 bg-gray-100 rounded">{props.message}</p>
                 </div>
-                <p classNameName="text-sm tracking-tight font-light text-slate-400 leading-6">{props.createdAt}</p>
+                <p className="text-sm tracking-tight font-light text-slate-400 leading-6">{props.createdAt}</p>
               </div>
             </div>
             </div>
