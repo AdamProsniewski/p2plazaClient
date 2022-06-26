@@ -7,7 +7,7 @@ export default function Create(props) {
         <span className="close-icon" onClick={props.handleClose}>x</span>
 
             <div className="text-3xl mb-6 text-center ">
-                Add offer
+                Add message
             </div>
 
             <div className="grid grid-cols-2 gap-4 max-w-xl m-auto">
@@ -16,13 +16,6 @@ export default function Create(props) {
                     <input onChange={props.onChange} type="text" className="border-solid border-gray-400 border-2 p-3 md:text-xl w-full" placeholder="Title" name="message" value={props.state.message} />
                 </div>
 
-                <div className="col-span-2">
-                    <input onChange={props.onChange} type="text" className="border-solid border-gray-400 border-2 p-3 md:text-xl w-full" placeholder="Category" name="category" value={props.state.category}/>
-                </div>
-
-                <div className="col-span-2">
-                    <textarea onChange={props.onChange} cols="30" rows="8" className="border-solid border-gray-400 border-2 p-3 md:text-xl w-full" placeholder="Description" name="description" value={props.state.description}></textarea>
-                </div>
 
                 <div className="col-span-2 text-right">
                     <button onClick={() => {props.saveMessage(); props.handleClose()}} className="bg-pink-800 px-5 py-3 text-sm shadow-sm font-medium tracking-wider  text-pink-100 rounded-full hover:shadow-2xl hover:bg-pink-900">

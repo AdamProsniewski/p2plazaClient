@@ -150,8 +150,7 @@ export default function Messages(){
       {/* <button onClick={saveMessage} className="bg-pink-800 px-5 py-3 text-sm shadow-sm font-medium tracking-wider  text-pink-100 rounded-full hover:shadow-2xl hover:bg-pink-900">Send Message </button> */}
 
   <div>
-  <button onClick={backupData} className="bg-green-400 px-5 py-3 text-sm shadow-sm font-medium tracking-wider  text-green-100 rounded-full hover:shadow-2xl hover:bg-green-500">Backup Data</button>
-    <button onClick={togglePopup} className="bg-pink-800 px-5 py-3 text-sm shadow-sm font-medium tracking-wider  text-pink-100 rounded-full hover:shadow-2xl hover:bg-pink-900">Add offer </button>
+    <button onClick={togglePopup} className="bg-pink-800 px-5 py-3 text-sm shadow-sm font-medium tracking-wider  text-pink-100 rounded-full hover:shadow-2xl hover:bg-pink-900">Message </button>
     {isOpen && <Create
       handleClose={togglePopup}
       onChange = {onChange}
