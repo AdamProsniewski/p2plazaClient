@@ -19,14 +19,5 @@ a {
 }
 
 .container{
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin-top: 20px;
-  flex-wrap: wrap;
-}
 
-.card{
-  display: flex;
-  margin: 5px;
 }
