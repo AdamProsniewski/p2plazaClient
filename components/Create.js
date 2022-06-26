@@ -13,7 +13,7 @@ export default function Create(props) {
             <div className="grid grid-cols-2 gap-4 max-w-xl m-auto">
 
                 <div className="col-span-2">
-                    <input onChange={props.onChange} type="text" className="border-solid border-gray-400 border-2 p-3 md:text-xl w-full" placeholder="Title" name="message" value={props.state.message} />
+                    <input onChange={props.onChange} type="text" className="border-solid border-gray-400 border-2 p-3 md:text-xl w-full" placeholder="Message" name="message" value={props.state.message} />
                 </div>
 
 

@@ -4,8 +4,7 @@ import 'gun/sea'
 import Ajv from "ajv"
 import Message from './Message'
 import Create from './Create'
-
-
+import Router from 'next/router';
 const ajv = new Ajv()
 ajv.addKeyword('isNotEmpty', {
   type: 'string',
@@ -104,28 +103,28 @@ export default function Messages(){
     setForm({ ...formState, [e.target.name]: e.target.value  })
   }
 
-  function backupData() {
+//   function backupData() {
 
-    var a = {};
-    for (var i = 0; i < localStorage.length; i++) {
-      var k = localStorage.key(i);
-      var v = localStorage.getItem(k);
-      a[k] = v;
-    }
-    var s = JSON.stringify(a);
-    console.log(s);
-    return s;
-  }
+//     var a = {};
+//     for (var i = 0; i < localStorage.length; i++) {
+//       var k = localStorage.key(i);
+//       var v = localStorage.getItem(k);
+//       a[k] = v;
+//     }
+//     var s = JSON.stringify(a);
+//     console.log(s);
+//     return s;
+//   }
 
-  function writeLocalStorage(data) {
-    localStorage.clear()
-    var o = JSON.parse(data);
-    for (var property in o) {
-        if (o.hasOwnProperty(property)) {
-            localStorage.setItem(property, o[property]);
-        }
-    }
-}
+//   function writeLocalStorage(data) {
+//     localStorage.clear()
+//     var o = JSON.parse(data);
+//     for (var property in o) {
+//         if (o.hasOwnProperty(property)) {
+//             localStorage.setItem(property, o[property]);
+//         }
+//     }
+// }
   const [isOpen, setIsOpen] = useState(false);
  
   const togglePopup = () => {
