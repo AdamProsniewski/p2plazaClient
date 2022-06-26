@@ -85,7 +85,7 @@ export default function Messages(){
       message: formState.message,
       category: formState.category,
       description: formState.description,
-      createdAt: Date.now()
+      createdAt: Date(Date.now())
     }
     const valid = validation(newmessage)
     if(valid){
