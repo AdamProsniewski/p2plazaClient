@@ -85,7 +85,7 @@ export default function Messages(){
       message: formState.message,
       category: formState.category,
       description: formState.description,
-      createdAt: Date(Date.now())
+      createdAt: Date(Date.now()).toString().replace('(uniwersalny czas koordynowany)', '')
     }
     const valid = validation(newmessage)
     if(valid){
