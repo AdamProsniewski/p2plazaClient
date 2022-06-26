@@ -16,6 +16,8 @@ import MailIcon from '@mui/icons-material/Mail';
 import NotificationsIcon from '@mui/icons-material/Notifications';
 import MoreIcon from '@mui/icons-material/MoreVert';
 import CssBaseline from '@mui/material/CssBaseline';
+import Link from 'next/link';
+
 //import './navbar.css';
 // import {
 //   BrowserRouter as Router,
@@ -108,7 +110,11 @@ export default function PrimarySearchAppBar() {
       onClose={handleMenuClose}
     >
       <MenuItem onClick={handleMenuClose}>Profile</MenuItem>
-      <MenuItem onClick={handleMenuClose}>My account</MenuItem>
+      <MenuItem onClick={handleMenuClose}>
+          <Link href="/Auth">
+            <a>Login</a>
+          </Link>
+          </MenuItem>
     </Menu>
   );
 
