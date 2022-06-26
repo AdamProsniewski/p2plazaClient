@@ -71,7 +71,8 @@ export default function Messages(){
   function validation(message){
     const validate = ajv.compile(schema)
     const validated = validate(message)
-    if (!validated) console.log(validate.errors)
+    if (message.name === '') { alert('Must be Logged in') };
+    if (!validated && message.name !== '') { alert("Can't be empty") };
     return validated
   }
 
