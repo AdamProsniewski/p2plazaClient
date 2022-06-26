@@ -1,5 +1,5 @@
 //import {useState} from 'react'
-import Form from "./Form"
+import Form from "../form/Form"
 import Gun from 'gun/gun'
 import 'gun/sea'
 //import 'gun/axe'

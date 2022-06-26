@@ -2,10 +2,9 @@ import { useEffect, useState} from 'react'
 import Gun from 'gun/gun'
 import 'gun/sea'
 import Ajv from "ajv"
-import Message from './Message'
-import Create from './Create'
-
-
+import Message from '../message/Message'
+import Create from '../create/Create'
+import Router from 'next/router';
 const ajv = new Ajv()
 ajv.addKeyword('isNotEmpty', {
   type: 'string',
@@ -72,7 +71,8 @@ export default function Messages(){
   function validation(message){
     const validate = ajv.compile(schema)
     const validated = validate(message)
-    if (!validated) console.log(validate.errors)
+    if (message.name === '') { alert('Must be Logged in') };
+    if (!validated && message.name !== '') { alert("Can't be empty") };
     return validated
   }
 
@@ -85,7 +85,7 @@ export default function Messages(){
       message: formState.message,
       category: formState.category,
       description: formState.description,
-      createdAt: Date.now()
+      createdAt: Date(Date.now()).toString().replace('(uniwersalny czas koordynowany)', '')
     }
     const valid = validation(newmessage)
     if(valid){
@@ -104,28 +104,28 @@ export default function Messages(){
     setForm({ ...formState, [e.target.name]: e.target.value  })
   }
 
-  function backupData() {
+//   function backupData() {
 
-    var a = {};
-    for (var i = 0; i < localStorage.length; i++) {
-      var k = localStorage.key(i);
-      var v = localStorage.getItem(k);
-      a[k] = v;
-    }
-    var s = JSON.stringify(a);
-    console.log(s);
-    return s;
-  }
+//     var a = {};
+//     for (var i = 0; i < localStorage.length; i++) {
+//       var k = localStorage.key(i);
+//       var v = localStorage.getItem(k);
+//       a[k] = v;
+//     }
+//     var s = JSON.stringify(a);
+//     console.log(s);
+//     return s;
+//   }
 
-  function writeLocalStorage(data) {
-    localStorage.clear()
-    var o = JSON.parse(data);
-    for (var property in o) {
-        if (o.hasOwnProperty(property)) {
-            localStorage.setItem(property, o[property]);
-        }
-    }
-}
+//   function writeLocalStorage(data) {
+//     localStorage.clear()
+//     var o = JSON.parse(data);
+//     for (var property in o) {
+//         if (o.hasOwnProperty(property)) {
+//             localStorage.setItem(property, o[property]);
+//         }
+//     }
+// }
   const [isOpen, setIsOpen] = useState(false);
  
   const togglePopup = () => {
@@ -150,8 +150,7 @@ export default function Messages(){
       {/* <button onClick={saveMessage} className="bg-pink-800 px-5 py-3 text-sm shadow-sm font-medium tracking-wider  text-pink-100 rounded-full hover:shadow-2xl hover:bg-pink-900">Send Message </button> */}
 
   <div>
-  <button onClick={backupData} className="bg-green-400 px-5 py-3 text-sm shadow-sm font-medium tracking-wider  text-green-100 rounded-full hover:shadow-2xl hover:bg-green-500">Backup Data</button>
-    <button onClick={togglePopup} className="bg-pink-800 px-5 py-3 text-sm shadow-sm font-medium tracking-wider  text-pink-100 rounded-full hover:shadow-2xl hover:bg-pink-900">Add offer </button>
+    <button onClick={togglePopup} className="bg-pink-800 px-5 py-3 text-sm shadow-sm font-medium tracking-wider  text-pink-100 rounded-full hover:shadow-2xl hover:bg-pink-900">Message </button>
     {isOpen && <Create
       handleClose={togglePopup}
       onChange = {onChange}
