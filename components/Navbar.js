@@ -138,7 +138,10 @@ export default function PrimarySearchAppBar() {
       <MenuItem>
         <IconButton size="large" aria-label="show 4 new mails" color="inherit">
           <Badge badgeContent={4} color="error">
+            
+          <Link href="/Shop">
             <MailIcon />
+          </Link>
           </Badge>
         </IconButton>
         <p>Messages</p>

@@ -5,8 +5,8 @@ import Box from '@mui/material/Box';
 import Paper from '@mui/material/Paper';
 import Messages from './Messages';
 import { Grid } from '@mui/material';
-//import AlignItemsList from '../../components/leftGrid/leftGrid';
-//import BasicList from '../../components/rightGrid/rightGrid';
+import AlignItemsList from './leftGrid';
+import BasicList from './rightGrid';
 //import './Grid.css'
 
 
@@ -17,7 +17,8 @@ export default function Grid2(props){
 
 <Grid item xs={3}>
   <div className='Sticky'> 
-  <p>test</p>
+
+  <AlignItemsList/>
   </div>
 </Grid>
 
@@ -27,7 +28,8 @@ export default function Grid2(props){
 
 <Grid item xs={3}>
   <div className='Sticky'>
-  <p>test</p>
+
+  <BasicList/>
   </div>
 </Grid>
 
